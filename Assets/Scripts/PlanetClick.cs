@@ -11,6 +11,9 @@ public class PlanetClick : MonoBehaviour
     public float focusDistance = 20f;
 
     static bool isFocused = false;
+    public GameObject rightPanel;
+    public GameObject miniGameContainer;
+
 
     void Update()
     {
@@ -31,11 +34,20 @@ public class PlanetClick : MonoBehaviour
         mainCamera.gameObject.SetActive(false);
         focusCamera.gameObject.SetActive(true);
 
-        focusCameraScript.SetTarget(transform, focusDistance);
+        float distance = transform.localScale.x * 4f;
+        focusCameraScript.SetTarget(transform, distance);
 
         if (clickText != null)
             clickText.SetActive(false);
+
+        if (rightPanel != null)
+            rightPanel.SetActive(true);
+
+        if (miniGameContainer != null)
+            miniGameContainer.SetActive(true);
+
     }
+
 
     void ReturnToMain()
     {
@@ -46,5 +58,13 @@ public class PlanetClick : MonoBehaviour
 
         if (clickText != null)
             clickText.SetActive(true);
+
+        if (rightPanel != null)
+            rightPanel.SetActive(false);
+
+        if (miniGameContainer != null)
+            miniGameContainer.SetActive(false);
+
     }
+
 }
