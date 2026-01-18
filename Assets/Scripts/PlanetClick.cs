@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlanetClick : MonoBehaviour
 {
@@ -14,6 +14,12 @@ public class PlanetClick : MonoBehaviour
     public GameObject rightPanel;
     public GameObject miniGameContainer;
 
+    [HideInInspector]
+    public bool isCompleted = false;
+    public OrbitMiniGame miniGame;
+
+
+
 
     void Update()
     {
@@ -23,12 +29,27 @@ public class PlanetClick : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (isCompleted) return; // ← ВАЖНО
         if (isFocused) return;
+
         FocusOnPlanet();
     }
 
+    void OnPlanetCompleted()
+    {
+        if (isCompleted) return; // защита от двойного вызова
+
+        isCompleted = true;
+        GameProgress.Instance.Increment();
+    }
+
+
+
     void FocusOnPlanet()
     {
+        miniGame.OnWin = null;              // ← ВАЖНО
+        miniGame.OnWin += OnPlanetCompleted;
+
         isFocused = true;
 
         mainCamera.gameObject.SetActive(false);

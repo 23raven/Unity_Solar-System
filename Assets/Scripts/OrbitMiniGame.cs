@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
 public class OrbitMiniGame : MonoBehaviour
 {
     public OrbitDotMovement dot;
     public Image targetZone;
+    public System.Action OnWin;
+
 
     [Header("Zone Settings")]
     public float zoneAngle = 20f; // ← В ГРАДУСАХ, главный параметр
@@ -58,11 +61,19 @@ public class OrbitMiniGame : MonoBehaviour
         if (diff <= successAngle)
         {
             Debug.Log("WIN");
+            OnWin?.Invoke();
             gameObject.SetActive(false);
         }
         else
         {
             Debug.Log("MISS");
         }
+        if (diff <= successAngle)
+{
+    Debug.Log("WIN");
+    OnWin?.Invoke();
+    gameObject.SetActive(false);
+}
+
     }
 }
