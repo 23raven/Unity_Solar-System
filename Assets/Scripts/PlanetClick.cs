@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlanetClick : MonoBehaviour
 {
+    [Header("UI")]
+    public Image backgroundImage;
+    public Sprite planetBackground; // пока null или заглушка
+
+
     public Camera mainCamera;
     public Camera focusCamera;
     public FocusCamera focusCameraScript;
@@ -66,6 +72,12 @@ public class PlanetClick : MonoBehaviour
 
         if (miniGameContainer != null)
             miniGameContainer.SetActive(true);
+
+        if (backgroundImage != null && planetBackground != null)
+        {
+            backgroundImage.sprite = planetBackground;
+        }
+
 
     }
 
