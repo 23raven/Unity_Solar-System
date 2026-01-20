@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 7169dd0496542b4429bfc3aceac29ecd, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -423,8 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 29e2cabcb2526d54d85c225db7358cf5, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -528,9 +528,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 192488850}
-  - {fileID: 1859025500}
   - {fileID: 333194778}
+  - {fileID: 1859025500}
+  - {fileID: 192488850}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -894,8 +894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 0743ccfe77b58444886208829f8c07d6, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -1113,8 +1113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 916840b9c66d75b4388a0a84f1ed03f8, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -1448,8 +1448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 15d3084b1fba93a4e8f3d23dd57f49d7, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -2068,8 +2068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 63c38b3a67135c848901eebce51ff218, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -2205,8 +2205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 35d08becacdd3594f9fb1cdc019f7ec5, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -2315,8 +2315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: b9678d62c1483f246b2514249d8964cf, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -2457,8 +2457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: 4a44c6a03ed628e469d98a4863de7a43, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
@@ -2887,8 +2887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
-  backgroundImage: {fileID: 0}
-  planetBackground: {fileID: 0}
+  backgroundImage: {fileID: 974639221}
+  planetBackground: {fileID: 21300000, guid: fc01408e1c01a0249a0d29fb2de6bae0, type: 3}
   mainCamera: {fileID: 1262027880}
   focusCamera: {fileID: 1577448776}
   focusCameraScript: {fileID: 1577448778}
