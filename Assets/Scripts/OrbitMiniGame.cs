@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class OrbitMiniGame : MonoBehaviour
 {
+    
     public OrbitDotMovement dot;
     public Image targetZone;
     public System.Action OnWin;
+    public RectTransform zoneMask;
 
 
     [Header("Zone Settings")]
@@ -14,6 +16,19 @@ public class OrbitMiniGame : MonoBehaviour
 
     float successAngle;
     bool canCheckInput = false;
+
+    public Image orbitImage;
+    public Image dotImage;
+
+    public void InitSprites(Sprite orbit, Sprite dot, Sprite zone)
+    {
+        orbitImage.sprite = orbit;
+        dotImage.sprite = dot;
+        targetZone.sprite = zone;
+    }
+
+
+
 
     void OnEnable()
     {
@@ -29,17 +44,14 @@ public class OrbitMiniGame : MonoBehaviour
 
     void SetupTargetZone()
     {
-        // 1️⃣ Связываем угол → картинку
         targetZone.fillAmount = zoneAngle / 360f;
-
-        // 2️⃣ successAngle = половина сектора
         successAngle = zoneAngle / 2f;
 
-        // 3️⃣ Рандомный поворот зоны
         float randomAngle = Random.Range(0f, 360f);
         targetZone.rectTransform.localEulerAngles =
             new Vector3(0, 0, randomAngle);
     }
+
 
     void Update()
     {
@@ -54,9 +66,11 @@ public class OrbitMiniGame : MonoBehaviour
     void CheckWin()
     {
         float dotAngle = dot.CurrentAngle;
-        float zoneAngleZ = targetZone.rectTransform.localEulerAngles.z;
 
-        float diff = Mathf.Abs(Mathf.DeltaAngle(dotAngle, zoneAngleZ));
+        float zoneStart = targetZone.rectTransform.localEulerAngles.z;
+        float zoneCenter = zoneStart + zoneAngle / 2f;
+
+        float diff = Mathf.Abs(Mathf.DeltaAngle(dotAngle, zoneCenter));
 
         if (diff <= successAngle)
         {
@@ -68,12 +82,6 @@ public class OrbitMiniGame : MonoBehaviour
         {
             Debug.Log("MISS");
         }
-        if (diff <= successAngle)
-{
-    Debug.Log("WIN");
-    OnWin?.Invoke();
-    gameObject.SetActive(false);
-}
-
     }
+
 }

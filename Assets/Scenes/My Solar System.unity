@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &103721089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103721090}
+  - component: {fileID: 103721092}
+  - component: {fileID: 103721091}
+  m_Layer: 5
+  m_Name: Orbit Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &103721090
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103721089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1814790852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &103721091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103721089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9eca33ce705e1e749bb98f7b9029d236, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 0
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &103721092
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103721089}
+  m_CullTransparentMesh: 1
 --- !u!1001 &128103942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,6 +316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: 3ad013d9c7b6f9d4682692ef3b651745, type: 3}
+  dotSprite: {fileID: 21300000, guid: f004ceec45d7b314c9f334444a20cea0, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 64e469c09cb5627409bfcf588c8573d3, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 7169dd0496542b4429bfc3aceac29ecd, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -423,6 +501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: 586786d4aca787d4d9619ff820f89263, type: 3}
+  dotSprite: {fileID: 21300000, guid: 8b751fd5fd932a04d99a724615b2bbb4, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 49cecce9fbc4c6644bdc40ca9adb301a, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 29e2cabcb2526d54d85c225db7358cf5, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -434,6 +515,96 @@ MonoBehaviour:
   miniGameContainer: {fileID: 1814790851}
   isCompleted: 0
   miniGame: {fileID: 1814790853}
+--- !u!1 &230458385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 230458386}
+  - component: {fileID: 230458388}
+  - component: {fileID: 230458387}
+  - component: {fileID: 230458389}
+  m_Layer: 5
+  m_Name: RingMask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &230458386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230458385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1908764993}
+  m_Father: {fileID: 1814790852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &230458387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230458385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9eca33ce705e1e749bb98f7b9029d236, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 0
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &230458388
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230458385}
+  m_CullTransparentMesh: 1
+--- !u!114 &230458389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230458385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
+  m_ShowMaskGraphic: 0
 --- !u!1 &287368444
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbitDotMovement
   center: {fileID: 0}
-  radius: 150
+  radius: 140
   speed: 120
 --- !u!114 &428762602
 MonoBehaviour:
@@ -895,6 +1066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: aa0b1fe558870d547b3fd9345e260bb1, type: 3}
+  dotSprite: {fileID: 21300000, guid: 6fb5adf5862bf6d48a8b7a634741435a, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 0d4f10dd21a260343a2dae3307257014, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 0743ccfe77b58444886208829f8c07d6, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -1114,6 +1288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: a51db6d8c7c1132438d2afd84ea2feb6, type: 3}
+  dotSprite: {fileID: 21300000, guid: dabc7bcd7f4d11c4b98113c9dc1721a4, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: f7a48db7e66233f4a9be79fd07ceb406, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 916840b9c66d75b4388a0a84f1ed03f8, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -1588,6 +1765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: 1c1e7f83b9d1a2b41b761846fa2ea61d, type: 3}
+  dotSprite: {fileID: 21300000, guid: 688458da7d1357e42b422c2f76c751f5, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 37107a5b487071042b04231d71f2fcf0, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 15d3084b1fba93a4e8f3d23dd57f49d7, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -2208,6 +2388,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: a388ca374a6593746939b7837232a35c, type: 3}
+  dotSprite: {fileID: 21300000, guid: 46eddf24c0138b34884211eecf477bdf, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 9372b794702ff2e45a06209ebcd91c21, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 63c38b3a67135c848901eebce51ff218, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -2345,6 +2528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: c1779bbec45f589429f7bb6531a06da9, type: 3}
+  dotSprite: {fileID: 21300000, guid: 957240a334fdf0e4abd18d7a997854fd, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 301d7005b70827649a5a4a8427c136de, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 35d08becacdd3594f9fb1cdc019f7ec5, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -2386,8 +2572,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 974639220}
-  - {fileID: 1882280187}
-  - {fileID: 1908764993}
+  - {fileID: 103721090}
+  - {fileID: 230458386}
   - {fileID: 428762600}
   - {fileID: 1871555554}
   m_Father: {fileID: 192488850}
@@ -2411,7 +2597,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OrbitMiniGame
   dot: {fileID: 428762601}
   targetZone: {fileID: 1908764994}
+  zoneMask: {fileID: 230458386}
   zoneAngle: 20
+  orbitImage: {fileID: 230458387}
+  dotImage: {fileID: 428762602}
 --- !u!1 &1816420417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1377197793697218, guid: b4201d402613a4464b35c805dafcca62, type: 3}
@@ -2456,6 +2645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: 9890288c24a5d894699e93b5fe317ca0, type: 3}
+  dotSprite: {fileID: 21300000, guid: f5e7325d32cf4ad4794a081afb877ecb, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 854936924f2bb1542902baaa105cb3cd, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: b9678d62c1483f246b2514249d8964cf, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -2598,6 +2790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: cce5dafe478bc1b4194f402ab17259f4, type: 3}
+  dotSprite: {fileID: 21300000, guid: b1f7139e820f71840a30d3477389c338, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 787541e20bec13e46ae2d87c44469532, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: 4a44c6a03ed628e469d98a4863de7a43, type: 3}
   mainCamera: {fileID: 1262027880}
@@ -2900,81 +3095,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871555553}
   m_CullTransparentMesh: 1
---- !u!1 &1882280186
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1882280187}
-  - component: {fileID: 1882280189}
-  - component: {fileID: 1882280188}
-  m_Layer: 5
-  m_Name: Orbit Circle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1882280187
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882280186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1814790852}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1882280188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882280186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9eca33ce705e1e749bb98f7b9029d236, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1882280189
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882280186}
-  m_CullTransparentMesh: 1
 --- !u!1 &1893195976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,12 +3241,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908764992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1814790852}
+  m_Father: {fileID: 230458386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3146,7 +3266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41568628, g: 0.6, b: 0.30588236, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3158,7 +3278,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.15
+  m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -3288,6 +3408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ced32a977f5b342af4b14c7cb3b60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetClick
+  orbitSprite: {fileID: 21300000, guid: 666e96f6de838c142a40b73a1c50259d, type: 3}
+  dotSprite: {fileID: 21300000, guid: 3c10fa328cacda641b2f20346afb8369, type: 3}
+  targetZoneSprite: {fileID: 21300000, guid: 226ba1801c6992f4e953b9d4b54b5246, type: 3}
   backgroundImage: {fileID: 974639221}
   planetBackground: {fileID: 21300000, guid: fc01408e1c01a0249a0d29fb2de6bae0, type: 3}
   mainCamera: {fileID: 1262027880}

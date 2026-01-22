@@ -3,10 +3,14 @@ using UnityEngine.UI;
 
 public class PlanetClick : MonoBehaviour
 {
+    [Header("Orbit Sprites")]
+    public Sprite orbitSprite;
+    public Sprite dotSprite;
+    public Sprite targetZoneSprite;
+
     [Header("UI")]
     public Image backgroundImage;
     public Sprite planetBackground; // пока null или заглушка
-
 
     public Camera mainCamera;
     public Camera focusCamera;
@@ -53,6 +57,16 @@ public class PlanetClick : MonoBehaviour
 
     void FocusOnPlanet()
     {
+        miniGame.InitSprites(
+        orbitSprite,
+        dotSprite,
+        targetZoneSprite
+        );
+
+
+
+
+
         miniGame.OnWin = null;              // ← ВАЖНО
         miniGame.OnWin += OnPlanetCompleted;
 
