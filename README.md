@@ -35,4 +35,4 @@ Progress is represented by planet icons that change color when completed
 Each planet can be completed only once per session
 
 🎥 Watch the gameplay video on YouTube:
-[https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=e2kvKioneVA)
+[YouTube Video](https://www.youtube.com/watch?v=e2kvKioneVA)
