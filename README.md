@@ -1,6 +1,6 @@
 # Unity Solar System
 
-A Unity 3D project featuring an interactive Solar System with a simple orbit mini game and visual progression.
+A Unity 3D project featuring an interactive Solar System with a simple orbit mini game and visual progression
 
 ## Features
 
@@ -31,5 +31,7 @@ A Unity 3D project featuring an interactive Solar System with a simple orbit min
 
 ## Notes
 
-Progress is represented by planet icons that change color when completed.  
-Each planet can be completed only once per session.
+Progress is represented by planet icons that change color when completed
+Each planet can be completed only once per session
+
+[Watch gameplay on YouTube]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=e2kvKioneVA))
