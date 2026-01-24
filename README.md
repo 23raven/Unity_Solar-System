@@ -14,9 +14,8 @@ A Unity 3D project featuring an interactive Solar System with a simple orbit min
 
 | Solar System | Orbit Mini Game |
 |-------------|----------------|
-| ![Solar System](<img width="1919" height="1079" alt="SolSys1" src="https://github.com/user-attachments/assets/d3e444b6-12fe-48b6-bf7d-d40eb64488c4" />
-) | ![Orbit Mini Game](<img width="1919" height="1079" alt="SolSys2" src="https://github.com/user-attachments/assets/7798a916-ee73-452f-ae8e-f7a77b793eba" />
-) |
+| <img src="https://github.com/user-attachments/assets/d3e444b6-12fe-48b6-bf7d-d40eb64488c4" width="100%"> | <img src="https://github.com/user-attachments/assets/7798a916-ee73-452f-ae8e-f7a77b793eba" width="100%"> |
+
 
 ## How to Play
 
