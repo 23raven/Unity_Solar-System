@@ -3,14 +3,22 @@ using UnityEngine.UI;
 
 public class PlanetClick : MonoBehaviour
 {
+    [Header("Progress")]
+    public int progressIndex; // 0–9
+    // 0 Sun, 1 Mercury, 2 Venus, 3 Earth, 4 Moon,
+    // 5 Mars, 6 Jupiter, 7 Saturn, 8 Uranus, 9 Neptune
+
+    [Header("UI")]
+    public GameObject progressBar;
+
     [Header("Orbit Sprites")]
     public Sprite orbitSprite;
     public Sprite dotSprite;
     public Sprite targetZoneSprite;
 
-    [Header("UI")]
+    [Header("Background")]
     public Image backgroundImage;
-    public Sprite planetBackground; // пока null или заглушка
+    public Sprite planetBackground;
 
     public Camera mainCamera;
     public Camera focusCamera;
@@ -26,10 +34,8 @@ public class PlanetClick : MonoBehaviour
 
     [HideInInspector]
     public bool isCompleted = false;
+
     public OrbitMiniGame miniGame;
-
-
-
 
     void Update()
     {
@@ -39,36 +45,29 @@ public class PlanetClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (isCompleted) return; // ← ВАЖНО
+        if (isCompleted) return;
         if (isFocused) return;
 
         FocusOnPlanet();
     }
 
-    void OnPlanetCompleted()
-    {
-        if (isCompleted) return; // защита от двойного вызова
-
-        isCompleted = true;
-        GameProgress.Instance.Increment();
-    }
-
-
-
     void FocusOnPlanet()
     {
+        // Инициализация мини-игры
         miniGame.InitSprites(
-        orbitSprite,
-        dotSprite,
-        targetZoneSprite
+            orbitSprite,
+            dotSprite,
+            targetZoneSprite
         );
 
+        // Скрываем прогресс-бар
+        if (progressBar != null)
+            progressBar.SetActive(false);
 
-
-
-
-        miniGame.OnWin = null;              // ← ВАЖНО
+        // Подписка на победу
+        miniGame.OnWin = null;
         miniGame.OnWin += OnPlanetCompleted;
+        miniGame.OnWin += CloseFocus;
 
         isFocused = true;
 
@@ -88,13 +87,25 @@ public class PlanetClick : MonoBehaviour
             miniGameContainer.SetActive(true);
 
         if (backgroundImage != null && planetBackground != null)
-        {
             backgroundImage.sprite = planetBackground;
-        }
-
-
     }
 
+    void OnPlanetCompleted()
+    {
+        if (isCompleted) return;
+
+        isCompleted = true;
+        GameProgress.Instance.CompletePlanet(progressIndex);
+
+        // Возвращаем прогресс-бар
+        if (progressBar != null)
+            progressBar.SetActive(true);
+    }
+
+    public void CloseFocus()
+    {
+        ReturnToMain();
+    }
 
     void ReturnToMain()
     {
@@ -111,7 +122,5 @@ public class PlanetClick : MonoBehaviour
 
         if (miniGameContainer != null)
             miniGameContainer.SetActive(false);
-
     }
-
 }

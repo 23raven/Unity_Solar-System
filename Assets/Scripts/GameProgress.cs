@@ -1,29 +1,18 @@
 using UnityEngine;
-using TMPro;
 
 public class GameProgress : MonoBehaviour
 {
     public static GameProgress Instance;
 
-    public int totalObjects = 10;
-    int completed = 0;
-
-    public TextMeshProUGUI progressText;
+    public ProgressBarUI progressBar;
 
     void Awake()
     {
         Instance = this;
-        UpdateUI();
     }
 
-    public void Increment()
+    public void CompletePlanet(int index)
     {
-        completed++;
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        progressText.text = $"{completed} / {totalObjects}";
+        progressBar.UnlockSymbol(index);
     }
 }

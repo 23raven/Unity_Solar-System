@@ -1,43 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Collections;
 
 public class ProgressBarUI : MonoBehaviour
 {
-    public Image fill;
-    public TMP_Text progressText;
+    public Image[] symbols; // 10 UI Image иконок
 
-    int current = 0;
-    int total = 10;
-
-    public void SetProgress(int value)
+    void Awake()
     {
-        current = value;
-        progressText.text = $"{current} / {total} explored";
-        StopAllCoroutines();
-        StartCoroutine(FillAnimation((float)current / total));
-    }
-
-    IEnumerator FillAnimation(float target)
-    {
-        float start = fill.fillAmount;
-        float t = 0f;
-
-        while (t < 1f)
+        // На старте все иконки чёрные (locked)
+        for (int i = 0; i < symbols.Length; i++)
         {
-            t += Time.deltaTime;
-            fill.fillAmount = Mathf.Lerp(start, target, t);
-            yield return null;
+            symbols[i].color = Color.black;
         }
-
-        fill.fillAmount = target;
     }
 
-    public void TestAdd()
+    public void UnlockSymbol(int index)
     {
-        SetProgress(current + 1);
+        if (index < 0 || index >= symbols.Length) return;
+        symbols[index].color = Color.white;
     }
-
-
 }
